@@ -27,4 +27,6 @@ router.route('/cars/:id/comments/:commentId').delete(secureRoute, carsController
 
 router.route('/users/:id/favorites/').post(userController.createFavorite)
 
+router.route('/myaccount/:id').get(userController.getFavorites)
+
 module.exports = router

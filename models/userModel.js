@@ -4,8 +4,9 @@ const bcrypt = require('bcrypt')
 const userSchema = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
-  //! user favorites as reference to car model favorites: [{type: mongoose.Schema.O}] 
+  password: { type: String, required: true },
+  favorites: [{ type: mongoose.Schema.ObjectId, ref: 'Car' }]
+  //! user favorites as reference to car model favorites: [{type: mongoose.Schema.O}]
 })
 
 userSchema.set('toJSON', {
@@ -26,7 +27,10 @@ userSchema
   })
 
 userSchema.pre('validate', function checkPassword(next) {
-  if (this.isModified('password') && this._passwordConfirmation !== this.password) {
+  if (
+    this.isModified('password') &&
+    this._passwordConfirmation !== this.password
+  ) {
     this.invalidate('passwordConfirmation', 'Does not match')
   }
   next()
