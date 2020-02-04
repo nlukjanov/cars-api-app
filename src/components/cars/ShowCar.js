@@ -53,7 +53,7 @@ class ShowCar extends Component {
   handleAddToFavorite = async () => {
     const currentUser = Auth.getPayload().sub
     try {
-      await axios.post(`/api/users/${currentUser}/favorites/`, this.state.car._id, {
+      await axios.post(`/api/users/${currentUser}/favorites/`, this.state.car, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
     } catch (err) {
