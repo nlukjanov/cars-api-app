@@ -54,7 +54,7 @@ mongoose.connect(
             safetyRating: 4,
             description:
               "The Kia Ceed (styled as CEED; known as the Kia Cee'd before 2018) is a compact car produced by the South Korean manufacturer Kia Motors since 2006, exclusively for the European market.",
-            user: createdUsers[0]
+            user: createdUsers[1]
           },
           {
             make: 'VW',
@@ -65,6 +65,25 @@ mongoose.connect(
             description:
               'The Up is a front-wheel drive with transverse engine mated to a five-speed manual gearbox and is 3.54 metres (139 in) long has a wheelbase of 2.42 m (95 in). The cabin is configured to four or five seats.',
             user: createdUsers[0]
+          },
+          {
+            make: 'Mazda',
+            carModel: 'CX-30',
+            image: 'https://cdn.euroncap.com/media/55694/mazda-cx-30.png',
+            safetyRating: 5,
+            description:
+              "Mazda CX-30 was developed to create an entirely new design for a compact crossover SUV. Informed by the 'Sleek and Bold' design concept, the exterior styling exhibits toughness of an SUV, combined with the silhouette of a coupe.",
+            user: createdUsers[0]
+          },
+          {
+            make: 'Seat',
+            carModel: 'Tarraco',
+            image:
+              'https://cdn.euroncap.com/media/43131/seat-tarraco_359-235.png',
+            safetyRating: 5,
+            description:
+              'After the SEAT Alhambra MPV, the SEAT Tarraco is the second model of the brand to offer a maximum of seven seats. The interior of the Tarraco is spacious, with its boot capacity measuring up to 1920 l, and only when the two seats in the second row are used, it is reduced to 750 l.',
+            user: createdUsers[1]
           }
         ])
       })
