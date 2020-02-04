@@ -15,7 +15,11 @@ mongoose.connect(
   }
 )
 
+app.use(express.static(`${__dirname}/dist`))
+
 app.use(bodyParser.json())
 app.use(logger)
 app.use('/api', router)
+
+app.use('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 app.listen(port, () => console.log(`App listening on port ${port}!`))
