@@ -1,0 +1,14 @@
+// create car
+{
+  "make": "Tesla",
+  "model": "Model 3",
+  "safetyRating": 5,
+  "image": "https://www.driving.co.uk/s3/st-driving-prod/uploads/2019/03/2019-Tesla-Model-3-03.jpg",
+  "description": "The Tesla Model 3 is an electric four-door sedan developed by Tesla. The Model 3 Standard Range Plus version delivers an EPA-rated all-electric range of 250 miles (402 km) and the Long Range versions deliver 322 miles (518 km). At least one Model 3 was driven 606.2 miles (975 km) on a single charge."
+}
+
+// update car
+{
+	"model": "Q3",
+    "safetyRating": 3,
+}
