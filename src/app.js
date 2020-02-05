@@ -12,20 +12,14 @@ import NewCar from './components/cars/NewCar'
 import ShowCar from './components/cars/ShowCar'
 import EditCar from './components/cars/EditCar'
 import MyAccount from './components/MyAccount'
+import Navbar from './Navbar'
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
         <main>
-          <nav className='navbar'>
-            <Link className='navbar-item' to='/'>Home Page</Link>
-            <Link className='navbar-item' to='/cars'>Car Index</Link>
-            <Link className='navbar-item' to='/register'>Register</Link>
-            <Link className='navbar-item' to='/login'>Login</Link>
-            <Link className='navbar-item' to='/cars/new'>Create New Car</Link>
-            <Link className='navbar-item' to='/myaccount'>My Account</Link>
-          </nav>
+          <Navbar />
           <Switch>
             <Route exact path='/' component={Home}></Route>
             <Route path='/cars/:id/edit' component={EditCar} />
